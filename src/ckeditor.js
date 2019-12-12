@@ -51,8 +51,8 @@ import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformatio
 import HorizontalLine from "@ckeditor/ckeditor5-horizontal-line/src/horizontalline";
 //import StandardEditingMode from "@ckeditor/ckeditor5-restricted-editing/src/standardeditingmode";
 
-export class DecoupledEditor extends DecoupledEditorBase {}
-export class ClassicEditor extends ClassicEditorBase {}
+class DecoupledEditor extends DecoupledEditorBase {}
+class ClassicEditor extends ClassicEditorBase {}
 
 // A simple plugin that extends the remove format feature to consider links.
 function RemoveFormatLinks(editor) {
@@ -251,3 +251,5 @@ ClassicEditor.defaultConfig = {
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: "en"
 };
+
+export default { DecoupledEditor, ClassicEditor };
